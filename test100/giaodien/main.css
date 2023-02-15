@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* nhớ định dạng font chữ */
+}
+li{
+    list-style: none; 
+    /*  dùng để xóa mấy cái chấm chấm ở phần list*/
+}
+
+a{
+    text-decoration: none;
+    /* bỏ cái gạch chân của chữ  */
+    color: #000;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    /* cái này căn ra giữa */
+    padding: 12px 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(225, 225, 2250, 0.3);
+}
+header:hover{
+    background: rgba(255, 255, 255, 1);
+}
+
+/* chia ra ba phần */
+.logo{
+    flex: 1;
+}
+.menu{
+    flex: 3;
+    display: flex;
+}
+.menu > li{
+    padding: 0 12px;
+}
+
+.sub-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    top:60px;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1;
+    background: #fff;
+    
+  
+   
+}
+.menu >li:hover .sub-menu{
+    visibility: visible;
+    top: 50px;
+   
+}
+
+.sub-menu >li>a{
+    font-weight: bold;
+
+}
+.sub-menu ul{
+    padding-left: 20px;
+}
+.menu > li a{
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+    
+}
+.other{
+    flex: 1;
+    display: flex;
+}
+.other > li{
+    padding: 0 12px;
+}
+.other>li:first-child{
+    position: relative;
+}
+
+.other>li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+    
+}
+.other>li:first-child i{
+    position: absolute;
+    right:10px ;
+}
+
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+  }
+#Slide{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+}
+.slideshow{
+    float: left;
+}
+@-webkit-keyframes slide {
+   20% {margin-left: 0px;}
+   30% {margin-left: -850;}
+   50% {margin-left: -850;}
+   60% {margin-left: -1456px;}
+   80% {margin-left: -1456px;}
+ }
+  .aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-animation: slide 17s ease infinite;
+  }
+  .dot-container{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+  }
+  .dot{
+    height: 16px;
+    width: 16px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+/* ..................................................................app  */
+
+.app-container{
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+  }
+.app-gg{
+    margin: 50px;
+}
+.app-gg img{
+    height: 50px;
+}
+
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+.app-container input{
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+/* ..................................................................app  */
+footer{
+    text-align: center;
+}
+.footer-top{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height:80%  ;
+    background: #cccccc;
+    position:absolute;
+    right: 0;
+    top: 50%;
+    transform:translateY(-50%) ;
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+.footer-top li:last-child a{
+    margin-right: 12px;
+    color: #333;
+}
+.footer-center{
+    text-align: center;
+}
+.footer-bottom{
+    margin: 20px;
+    text-align: center;
+    background: r;
+
+}
+
+/* Category */
+
+.category{
+    padding: 100px ;
+    padding-left: 20px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-top{
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+.category-top p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 12px;
+    font-size: 12px;
+    margin-left: 12px;
+}
+.category-left{
+    width: 20%;
+}
+.category-right{
+    width: 80%;
+}
+.category-right-top-item:first-child{
+    flex: 2;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.category-right-top-item{
+    flex: 1;
+}
